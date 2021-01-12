@@ -12,78 +12,24 @@
   </div>
 
   <section class="cards">
-    <div class="card" id="7vSwoy63cy0">
-      <div class="card_image-container">
-        <img src="https://img.youtube.com/vi/7vSwoy63cy0/0.jpg" alt="Vídeo aula"/>
+
+    {% for item in items %}
+
+      <div class="card" id="{{item.id}}">
+        <div class="card_image-container">
+          <img src="https://img.youtube.com/vi/{{item.id}}/0.jpg" alt="Imagem de {{item.title}}"/>
+        </div>
+        <div class="card_content">
+          <p>{{item.title}}</p>
+        </div>
+        <div class="card_info">
+          <p>{{item.duration}}</p>
+          <p class="card_price">{{item.price}}</p>
+        </div>
       </div>
-      <div class="card_content">
-        <p>Universo GO - #NeverStopLearning</p>
-      </div>
-      <div class="card_info">
-        <p>57 min</p>
-        <p class="card_price">Free</p>
-      </div>
-    </div>
-    <div class="card" id="TtZfCLViuLo">
-      <div class="card_image-container">
-        <img src="https://img.youtube.com/vi/TtZfCLViuLo/0.jpg" alt="Vídeo aula"/>
-      </div>
-      <div class="card_content">
-        <p>Universo Swift - #NeverStopLearning</p>
-      </div>
-      <div class="card_info">
-        <p>57 min</p>
-        <p class="card_price">Free</p>
-      </div>
-    </div>
-    <div class="card" id="vKazFN3nbhs">
-      <div class="card_image-container">
-        <img src="https://img.youtube.com/vi/vKazFN3nbhs/0.jpg" alt="Vídeo aula"/>
-      </div>
-      <div class="card_content">
-        <p>Universo Kotlin - #NeverStopLearning</p>
-      </div>
-      <div class="card_info">
-        <p>57 min</p>
-        <p class="card_price">Free</p>
-      </div>
-    </div>
-    <div class="card" id="ZOdt0PAlhas">
-      <div class="card_image-container">
-        <img src="https://img.youtube.com/vi/ZOdt0PAlhas/0.jpg" alt="Vídeo aula"/>
-      </div>
-      <div class="card_content">
-        <p>Universo Ruby - #NeverStopLearning</p>
-      </div>
-      <div class="card_info">
-        <p>57 min</p>
-        <p class="card_price">Free</p>
-      </div>
-    </div>
-    <div class="card" id="BVWdPuNjuiY">
-      <div class="card_image-container">
-        <img src="https://img.youtube.com/vi/BVWdPuNjuiY/0.jpg" alt="Vídeo aula"/>
-      </div>
-      <div class="card_content">
-        <p>Universo Java - #NeverStopLearning</p>
-      </div>
-      <div class="card_info">
-        <p>57 min</p>
-        <p class="card_price">Free</p>
-      </div>
-    </div>
-    <div class="card" id="8asV5hADN78">
-      <div class="card_image-container">
-        <img src="https://img.youtube.com/vi/8asV5hADN78/0.jpg" alt="Vídeo aula"/>
-      </div>
-      <div class="card_content">
-        <p>Universo Elixir - #NeverStopLearning</p>
-      </div>
-      <div class="card_info">
-        <p>57 min</p>
-        <p class="card_price">Free</p>
-      </div>
-    </div>
+
+    {% endfor %}
+
   </section>
   <div class="modal-overlay">
     <div class="modal">
