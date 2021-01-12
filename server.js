@@ -1,10 +1,25 @@
-const express = require('express')
-const server = express()
+const express = require("express");
+const nunjucks = require("nunjucks");
 
-server.get('/', function(req, res){
-    return res.send('Olá! Tudo bem')
-})
+const server = express();
 
-server.listen(5000, function(){
-    console.log('Server is running!')
-})
+server.use(express.static('public'))
+
+server.set("view engine", "html");
+
+nunjucks.configure("views", {
+  express: server,
+});
+
+server.get("/", function (req, res) {
+  return res.render('index');
+});
+
+server.get("/portfolio", function (req, res) {
+    return res.render('portfolio');
+  });
+
+server.listen(5000, function () {
+  console.log("Server is running!");
+});
+ 
