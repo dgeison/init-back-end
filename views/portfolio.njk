@@ -18,7 +18,7 @@
       <div class="card" id="{{item.id}}">
         <div class="card_image-container {{'featured-wrapper' if item.featured}}">
           <img src="https://img.youtube.com/vi/{{item.id}}/0.jpg" alt="Imagem de {{item.title}}"/>
-          {% if  item.featured %}
+          {% if item.featured %}
             <div class="featured">Featured</div>
           {% endif %}
         </div>
@@ -34,15 +34,6 @@
     {% endfor %}
 
   </section>
-  <div class="modal-overlay">
-    <div class="modal">
-      <a class="close-modal">
-        <i class="material-icons">close</i>
-      </a>
-      <div class="modal-content">
-      </div>
-    </div>
-  </div>
 
   <script src="/scripts.js"></script>
 {% endblock %}
