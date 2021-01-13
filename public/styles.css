@@ -154,7 +154,7 @@ iframe{
 }
 
 /* === FEATURED === */
-.card_image-container{
+.featured-wrapper.card_image-container{
   position: relative;
 }
 .featured{
@@ -165,4 +165,23 @@ iframe{
   right: 5px;
   border-radius: 16px;
   top: -10px;
+}
+
+/* === VIDEO PAGE === */
+
+.video{
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.card_video-container{
+  position: relative;
+  padding-top: 62.5%;
+}
+
+.card_video-container iframe{
+  width: 100%;
+    height: 90%;
+    position: absolute;
+    top: 0;
 }
