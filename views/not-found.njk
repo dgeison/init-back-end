@@ -1,0 +1,19 @@
+{% extends "layout.njk"%}
+
+{%block head %}
+
+  <title>Algo deu errado</title>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="not-found">
+    <h1>{{err.text}}</h1>
+    <img src="{{err.err404}}" alt="Imagem de {{err.err404}}"/>
+   
+
+  </div>
+
+   
+  {% endblock%}

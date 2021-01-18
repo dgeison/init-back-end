@@ -42,8 +42,7 @@ server.get("/video", function (req, res) {
   const id = req.query.id;
 
   const video = videos.find(function (video) {
-    return video.id == id
-
+    return video.id == id;
   });
 
   if (!video) {
@@ -51,6 +50,14 @@ server.get("/video", function (req, res) {
   }
 
   return res.render("video", { item: video });
+});
+
+server.use(function (req, res) {
+  const err = {
+    text: "Não encontrei nada, vou continuar a procurar!",
+    err404: "https://i.pinimg.com/564x/27/db/e8/27dbe87a7c28703fe80317d8d7b875b8.jpg",
+  };
+  res.status(404).render("not-found", { err });
 });
 
 server.listen(5000, function () {
