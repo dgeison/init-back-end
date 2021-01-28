@@ -52,10 +52,16 @@ server.get("/video", function (req, res) {
   return res.render("video", { item: video });
 });
 
+server.get("/courses/:id", function (req, res) {
+  const id = req.params.id;
+  return res.send(`O id fornecido na rota é: ${id}`);
+});
+
 server.use(function (req, res) {
   const err = {
     text: "Não encontrei nada, vou continuar a procurar!",
-    err404: "https://i.pinimg.com/564x/27/db/e8/27dbe87a7c28703fe80317d8d7b875b8.jpg",
+    err404:
+      "https://i.pinimg.com/564x/27/db/e8/27dbe87a7c28703fe80317d8d7b875b8.jpg",
   };
   res.status(404).render("not-found", { err });
 });
