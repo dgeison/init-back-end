@@ -19,6 +19,7 @@ module.exports = [
     duration: "57 min",
     price: "Free",
     featured: false,
+    description: "Texto qualquer de um determinado curso!"
   },
   {
     id: "ZOdt0PAlhas",

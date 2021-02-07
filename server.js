@@ -39,6 +39,7 @@ server.get("/portfolio", function (req, res) {
 });
 
 server.get("/video", function (req, res) {
+  //armazena uma id capturada pelo query
   const id = req.query.id;
 
   const video = videos.find(function (video) {
@@ -54,14 +55,23 @@ server.get("/video", function (req, res) {
 
 server.get("/courses/:id", function (req, res) {
   const id = req.params.id;
-  return res.send(`O id fornecido na rota é: ${id}`);
+  // return res.send(`O id fornecido na rota é: ${id}`);
+
+  const courses = videos.find(function (video) {
+    return (video.id = id);
+  });
+
+  if(!courses){
+    return res.send("Curso não encontrado!")
+  }
+
+  return res.render("courses", { item: courses });
 });
 
 server.use(function (req, res) {
   const err = {
     text: "Não encontrei nada, vou continuar a procurar!",
-    err404:
-      "https://i.pinimg.com/564x/27/db/e8/27dbe87a7c28703fe80317d8d7b875b8.jpg",
+    err404: "assets/meditacao.svg",
   };
   res.status(404).render("not-found", { err });
 });
