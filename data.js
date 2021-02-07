@@ -5,6 +5,7 @@ module.exports = [
     duration: "57 min",
     price: "Free",
     featured: true,
+    description: "Texto qualquer de um determinado curso!"
   },
   {
     id: "TtZfCLViuLo",
@@ -12,6 +13,7 @@ module.exports = [
     duration: "57 min",
     price: "Free",
     featured: false,
+    description: "Texto qualquer de um determinado curso!"
   },
   {
     id: "vKazFN3nbhs",
@@ -27,6 +29,7 @@ module.exports = [
     duration: "57 min",
     price: "Free",
     featured: false,
+    description: "Texto qualquer de um determinado curso!"
   },
   {
     id: "BVWdPuNjuiY",
@@ -34,6 +37,7 @@ module.exports = [
     duration: "57 min",
     price: "Free",
     featured: true,
+    description: "Texto qualquer de um determinado curso!"
   },
   {
     id: "8asV5hADN78",
@@ -41,5 +45,6 @@ module.exports = [
     duration: "57 min",
     price: "Free",
     featured: true,
+    description: "Texto qualquer de um determinado curso!"
   },
 ];

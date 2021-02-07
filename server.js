@@ -61,17 +61,17 @@ server.get("/courses/:id", function (req, res) {
     return (video.id = id);
   });
 
-  if(!courses){
-    return res.send("Curso não encontrado!")
+  if (!courses) {
+    return res.send("Curso não encontrado!");
   }
 
   return res.render("courses", { item: courses });
 });
 
-server.use(function (req, res) {
+server.get("*", function (req, res) {
   const err = {
     text: "Não encontrei nada, vou continuar a procurar!",
-    err404: "assets/meditacao.svg",
+    err404: "/assets/meditacao.svg",
   };
   res.status(404).render("not-found", { err });
 });
